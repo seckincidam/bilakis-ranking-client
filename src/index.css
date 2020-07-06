@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f0f0f0;
+  background-color: #18182b;
   font-size: 13px;
 }
 
@@ -17,3 +17,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.blks-button-primary {
+  padding: 15px 30px;
+  background-color: #f53f20;
+  border-radius: 6px;
+  color: #FFF;
+  min-width: 50px;
+  border: 0px solid transparent;
+  cursor: pointer;
+  transition: .3s all ease;
+  -webkit-font-smoothing: subpixel-antialiased;
+  backface-visibility: hidden;
+  zoom: 100%;
+}
+.blks-button-inline {
+  border-radius: 0 6px 6px 0;
+}
+.blks-button-primary:hover {
+  transition: .3s all ease;
+  backface-visibility: hidden;
+  zoom: 150%;
+}
+
+.blks-form-control-inline {
+  display: flex;
+}
+.blks-form-control-inline input {
+  border-radius: 6px 0 0 6px;
+  border: 1px solid #ddd;
+}
+

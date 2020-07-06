@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,QAAQ,EAAE,KAAK;EACf,KAAK,EAAE,KAAK;EACZ,gBAAgB,EAAE,IAAI;EACtB,GAAG,EAAE,GAAG;EACR,IAAI,EAAE,GAAG;EACT,SAAS,EAAE,gBAAgB,CAAC,gBAAgB;EAC5C,OAAO,EAAE,IAAI;CAGM;;AAVrB,AAQE,cARY,CAQZ,KAAK,CAAC;EACJ,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,GAAG;CAAG",
+    "sources": [
+        "creation.sass"
+    ],
+    "names": [],
+    "file": "creation.css"
+}

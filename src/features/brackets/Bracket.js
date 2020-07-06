@@ -1,48 +1,49 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {addVote} from '../players/actions'
 import './css/brackets.css'
+
+
 
 class Bracket extends Component {
     constructor(props) {
         super(props)
 
         this.name = props.name
-        if(props.rank === 0) {
-            this.class = "blks-bracket first"
-        } else if(props.rank === 1) {
-            this.class = "blks-bracket second"
-        } else {
-            this.class = "blks-bracket"
-        }
+        this.class = "blks-bracket"
         this.image = props.image
-        this._handleClick = this._handleClick.bind(this)
+        this.winnerClass = ""
     }
 
+
     render() {
+        this.winnerClass = this.props.winner ? "blks-winner" : ""
         return(
-            <div className={this.class} onClick={this._handleClick} rank={this.props.rank}>
+            <div 
+            className={this.class + " " + this.winnerClass}
+            rank={this.props.rank}>
                 <div className="blks-avatar">
                     <img src={this.image} alt="" />
                 </div>
                 <div className="blks-name">
-                    {this.name}
+                    <span style={{userSelect: 'none'}}>{this.name}</span>
                 </div>
                 <div className="blks-percent">
-                    {this.props.vote}
+                    <span style={{userSelect: 'none'}}>
+                    {this.props.totalVotes > 0 &&
+                        Math.round(this.props.vote/this.props.totalVotes*100)
+                    }</span>
                 </div>
+                <div className="blks-processBar" style={{width: Math.round(this.props.vote/this.props.totalVotes*100)+'%'}}></div>
             </div>
         )
     }
 
-    _handleClick(e) {
-        this.props.dispatch(addVote(this.props.id))
-    }
+    
 }
 
 function _mapStateToProps(state) {
     return {
-        players: state.players
+        rounds: state.roundView.rounds
     }
 }
 

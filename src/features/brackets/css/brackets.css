@@ -1,34 +1,51 @@
+.blks-bracket-container {
+  position: relative;
+  width: 100%;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: 0;
+  -webkit-transition: 0.3s all cubic-bezier(0.22, 1, 0.36, 1);
+  transition: 0.3s all cubic-bezier(0.22, 1, 0.36, 1);
+  margin: 15px 0;
+}
+
+.blks-bracket-container:hover {
+  -webkit-transform: scale(101%) !important;
+          transform: scale(101%) !important;
+}
+
 .blks-bracket {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #FFF;
+  background-color: #29294d;
+  color: #fff;
   border-radius: 6px;
-  margin: 15px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   max-width: 100%;
-  cursor: pointer;
 }
 
 .blks-bracket.first {
   background-color: #ff9900;
-  color: #fff;
 }
 
 .blks-bracket.second {
   background-color: #49559b;
-  color: #fff;
 }
 
 .blks-bracket .blks-avatar {
+  position: relative;
+  z-index: 5;
   width: 38px;
   height: 38px;
   overflow: hidden;
@@ -39,16 +56,37 @@
 }
 
 .blks-bracket .blks-name {
+  position: relative;
+  z-index: 5;
   padding: 10px;
 }
 
 .blks-bracket .blks-percent {
+  position: relative;
+  z-index: 5;
   padding: 10px;
+}
+
+.blks-winner {
+  background-color: #0095ff;
 }
 
 .blks-quadBracket {
   position: relative;
+  height: 300px;
   display: block;
-  padding: 5px;
+  margin: 30px;
+}
+
+.blks-processBar {
+  position: absolute;
+  left: 38px;
+  width: 0%;
+  top: 0;
+  bottom: 0;
+  background-color: #ffdd66;
+  z-index: 3;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
 }
 /*# sourceMappingURL=brackets.css.map */

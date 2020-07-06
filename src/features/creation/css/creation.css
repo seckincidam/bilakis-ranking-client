@@ -1,0 +1,16 @@
+.blks-creation {
+  position: fixed;
+  width: 400px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  padding: 15px;
+}
+
+.blks-creation input {
+  width: 100%;
+  padding: 5px;
+}
+/*# sourceMappingURL=creation.css.map */
